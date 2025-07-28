@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Desktop;
 import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.net.URI;
@@ -60,7 +61,7 @@ public class MazeFrame extends JFrame {
 
         add(this.mazePanel, BorderLayout.CENTER);
 
-        JPanel panelNorte = new JPanel();
+        JPanel panelNorte = new JPanel(new GridLayout(1,3));
         this.botonComienzo = new JButton("Seleccionar Inicio");
         this.botonFin = new JButton("Seleccionar Fin");
         this.botonPared = new JButton("Colocar Pared");
@@ -75,7 +76,7 @@ public class MazeFrame extends JFrame {
         this.solveButton = new JButton("Resolver");
 
         JPanel panelSur = new JPanel();
-        panelSur.add(new JLabel("Algoritmo:"));
+        panelSur.add(new JLabel("Tipo de Algoritmo:"));
         panelSur.add(this.algorithmSelector);
         panelSur.add(this.solveButton);
         panelSur.add(this.pasoAPasoButton);
@@ -88,7 +89,6 @@ public class MazeFrame extends JFrame {
 
         JMenu menuArchivo = new JMenu("Datos (Archivo)");
         this.menuItemNuevoLab = new JMenuItem("Nuevo laberinto");
-        menuArchivo.add(menuItemNuevoLab);
         barraMenu.add(menuArchivo);
 
         JMenu menuAyuda = new JMenu("Ayuda");
@@ -100,6 +100,7 @@ public class MazeFrame extends JFrame {
         this.menuItemVerResultados = new JMenuItem("Ver resultados");
 
         menuArchivo.add(menuItemVerResultados);
+        menuArchivo.add(menuItemNuevoLab);
         setJMenuBar(barraMenu);
         setVisible(true);
     }
