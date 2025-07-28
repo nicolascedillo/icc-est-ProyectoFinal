@@ -9,7 +9,7 @@ public class MazeSolverBFS implements MazeSolver {
     public SolveResult getPath(Cell[][] matrix, Cell startCell, Cell endCell) {
         // Implementation of BFS algorithm to find the path in the maze
         // This is a placeholder for the actual BFS logic
-        return new SolveResult(); // Return an empty SolveResult for now
+        return null; // Return an empty SolveResult for now
     }
     
 }
