@@ -1,14 +1,15 @@
 package models;
 
 public class Cell {
+    
     private int fila;
     private int columna;
     private CellState estado;
 
-    public Cell(int fila, int columna, CellState estado) {
+    public Cell(int fila, int columna ) {
         this.fila = fila;
         this.columna = columna;
-        this.estado = estado;
+        this.estado = CellState.VACIO; 
     }
 
     public int getFila() {

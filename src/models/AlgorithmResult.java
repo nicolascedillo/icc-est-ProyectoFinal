@@ -24,8 +24,7 @@ public class AlgorithmResult {
 
     @Override
     public String toString() {
-        return "Resultado de Algoritmo: " +
-                nombreDelAlgoritmo + " , " +
+        return  nombreDelAlgoritmo + " , " +
                 longitudDelCamino + ", " +
                 tiempo;
     }
