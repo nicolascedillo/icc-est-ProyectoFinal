@@ -191,9 +191,6 @@ public class MazeController {
         });
     }
 
-    public void limpiar() {
-        limpiarCeldasVisitadas();
-    }
 
     public void limpiarPasoAPaso() {
         this.pasoCeldasVisitadas = null;
